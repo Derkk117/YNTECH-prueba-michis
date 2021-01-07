@@ -102,7 +102,7 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header text-center">
-        <h5 class="modal-title" id="exampleModalLabel">Edit pet</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Editar dueño</h5>
       </div>
       <div class="modal-body">
       <form  action="/usuario/"id="EditarUserForm" method="POST">

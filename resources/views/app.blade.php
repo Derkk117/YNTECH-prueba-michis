@@ -7,7 +7,7 @@
 
 </head>
 
-<body class="bg-secondary">
+<body class="bg-secondary" style="min-width:800px">
     <!-- App Navigator -->
     <header class="shadow-sm w-100 p-0 m-0 fixed-top">
         <div class="navbar navbar-expand-sm bg-light">
@@ -51,6 +51,7 @@
 
     <script src="{{asset('js/app.js')}}"></script>
     <script src="{{asset('js/Usuario.js')}}"></script>
+    <script src="{{asset('js/Mascota.js')}}"></script>
 </body>
 
 </html>
