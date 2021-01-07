@@ -1,0 +1,12 @@
+.bg-image {
+    max-width: 1600px;
+    min-width: 350px;
+    margin: auto;
+    background-image: url(../../public/assets/Back_Ground.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
