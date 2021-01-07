@@ -3,67 +3,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Los michis @yield('title')</title>
-    
-    <link rel="stylesheet" href="{{asset('css/app.css')}}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
 </head>
 
-<body class="bg-light">
-    <!-- App Navigato- lg and xl screens -->
-    <header class="shadow-sm col-12 p-0 m-0 d-none d-sm-none d-md-none d-lg-block">
-        <div class="navbar navbar-light navbar-expand-lg bg-mainColor">
-            <div class="col-3 d-flex navbar-brand align-items-center">
-                <a href="/user" class="align-item-center p-0 m-0"><img src="{{ URL::to('assets/Logo_large.png') }}" alt="Home" class="img-fluid HomeLink"></a>
-                <h5 class="align-item-center p-2 m-0 text-light">Los michis</h5>
+<body class="bg-secondary">
+    <!-- App Navigator -->
+    <header class="shadow-sm w-100 p-0 m-0 fixed-top">
+        <div class="navbar navbar-expand-sm bg-light">
+            <div class="col-3 d-flex navbar-brand align-items-center m-0">
+                <h5 class="align-item-center p-2 m-0 text-dark">Los michis</h5>
             </div>
             <div class="col-9">
                 <ul class="navbar-nav justify-content-end align-items-center">
-                    <li class="nav-item">
-                        <a href="/user" class="nav-link text-light">Inicio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="/appointment" class="nav-link text-light">Appointments</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="/product" class="nav-link text-light">Inventory</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="/record" class="nav-link text-light">Record</a>
+                    <li class="nav-item px-5">
+                        <a href="/" class="nav-link text-dark">Inicio</a>
                     </li>
                 </ul>
             </div>
-        </div>
-    </header>
-    <!-- App Navigator sm to md screens -->
-    <header class="shadow-sm col-12 p-0 m-0 d-block d-lg-none d-xl-none">
-        <div class="pos-f-t">
-            <div class="collapse" id="navbarToggleExternalContent">
-                <div class="bg-mainColor p-4">
-                    <div class="navbar navbar-light navbar-expand-lg bg-mainColor">
-                        <div class=>
-                            <ul class="navbar-nav justify-content-end">
-                                <li class="nav-item">
-                                    <a href="/user" class="nav-link text-light">Home</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="/appointment" class="nav-link text-light">Appointments</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="/product" class="nav-link text-light">Inventory</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="/record" class="nav-link text-light">Record</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <nav class="navbar navbar-dark bg-mainColor">
-                <h3 class="align-item-center p-2 m-0 text-light">Vet-Zoo</h3>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-            </nav>
         </div>
     </header>
 
@@ -73,44 +30,27 @@
     </body>
 
     <!-- Footer -->
-    <div class="footer col-12 px-5 py-2 bg-mainColor text-light d-none d-sm-none d-md-none d-lg-flex" id="footer">
-        <div class="col-6 text-center d-inline-block">
-            <a href="" class="text-white">
-                <i class="fab fa-facebook-square"></i>
-            </a>
-            <a href="" class="text-white">
-                <i class="fab fa-instagram-square"></i>
-            </a>
-            <a href="" class="text-white">
-                <i class="fab fa-twitter-square"></i>
-            </a>
-        </div>
-        <div class="col-6 text-center d-inline-block">
+    <div class="footer col-12 px-5 py-2 bg-light text-dark d-none d-sm-none d-md-none d-lg-flex fixed-bottom" id="footer">
+        <div class="w-100 text-center d-inline-block">
             Contactanos: (456)-123-45-65
         </div>
     </div>
 
-    <div class="footer col-12 px-5 py-2 bg-mainColor text-light d-block d-lg-none d-xl-none" id="footer">
-        <div class="col-12 text-center">
-            <a href="" class="text-white">
-                <i class="fab fa-facebook-square"></i>
-            </a>
-            <a href="" class="text-white">
-                <i class="fab fa-instagram-square"></i>
-            </a>
-            <a href="" class="text-white">
-                <i class="fab fa-twitter-square"></i>
-            </a>
-        </div>
+    <div class="footer col-12 px-5 py-2 bg-light text-dark d-block d-lg-none d-xl-none fixed-bottom" id="footer">
         <div class="col-12 text-center">
             Contactanos: (456)-123-45-65
         </div>
     </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
 
     <!-- Modal -->
     @yield('Modal')
 
     <script src="{{asset('js/app.js')}}"></script>
+    <script src="{{asset('js/Usuario.js')}}"></script>
 </body>
 
 </html>

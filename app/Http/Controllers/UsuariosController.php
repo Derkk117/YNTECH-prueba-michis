@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Usuario;
 
 class UsuariosController extends Controller
 {
@@ -13,7 +14,8 @@ class UsuariosController extends Controller
      */
     public function index()
     {
-        //
+        $usuarios = Usuario::all();
+        return view('Contenido/Usuarios',compact('usuarios'));
     }
 
     /**
@@ -34,7 +36,21 @@ class UsuariosController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $usuario = new Usuario;
+        $usuario->nombre = $request->nombre;
+        $usuario->telefono = $request->telefono;
+        $usuario->correo = $request->correo;
+
+        if($usuario->nombre != "" && $usuario->telefono != "" && $usuario->correo != ""){
+            $usuario->save();   //Absolute route.
+            $ok = "Dueño creado correctamente.";
+            return redirect()->guest('/usuario')-> with(['ok' => $ok]);
+      }
+      else{
+          $err = "Todos los campos son requeridos.";
+            
+          return redirect()->guest('/usuario')->with( ['err' => $err] );
+      }
     }
 
     /**
@@ -45,7 +61,10 @@ class UsuariosController extends Controller
      */
     public function show($id)
     {
-        //
+        //obtenemos el usuario.
+        $usuario = Usuario::find($id);
+        //regresamos el usuario.
+        return $usuario;
     }
 
     /**
@@ -56,7 +75,6 @@ class UsuariosController extends Controller
      */
     public function edit($id)
     {
-        //
     }
 
     /**
@@ -68,7 +86,21 @@ class UsuariosController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $usuario = Usuario::find($id);
+        $usuario->nombre = $request->nombre;
+        $usuario->telefono = $request->telefono;
+        $usuario->correo = $request->correo;
+
+        if($usuario->nombre != "" && $usuario->telefono != "" && $usuario->correo != ""){
+            $usuario->save();   //Absolute route.
+            $ok = "Dueño actualizado correctamente.";
+            return redirect()->guest('/usuario')-> with(['ok' => $ok]);
+      }
+      else{
+          $err = "Para editar debes llenar todos los campos.";
+            
+          return redirect()->guest('/usuario')->with( ['err' => $err] );
+      }
     }
 
     /**
@@ -79,6 +111,6 @@ class UsuariosController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $delete = Usuario::destroy($id);
     }
 }
