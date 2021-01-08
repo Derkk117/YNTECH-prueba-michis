@@ -15,8 +15,8 @@ class CreateCitasTable extends Migration
     {
         Schema::create('citas', function (Blueprint $table) {
             $table->id();
-            $table->integer('paciente');
-            $table->integer('veterinario');
+            $table->integer('mascota_id');
+            $table->integer('veterinario_id');
             $table->date('date');
             $table->timestamps();
         });

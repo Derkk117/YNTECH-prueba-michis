@@ -33,7 +33,7 @@
                 <div class="w-50 m-auto d-flex justify-content-around">
                     <a href="/usuario" class="btn btn-outline-dark">Dueños</a>
                     <a href="/mascota" class="btn btn-outline-dark">Mascotas</a>
-                    <a href="/mascota" class="btn btn-outline-dark">Citas</a>
+                    <a href="/cita" class="btn btn-outline-dark">Citas</a>
                 </div>
             </div>
         </div>

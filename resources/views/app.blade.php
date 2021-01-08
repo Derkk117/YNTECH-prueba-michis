@@ -52,6 +52,7 @@
     <script src="{{asset('js/app.js')}}"></script>
     <script src="{{asset('js/Usuario.js')}}"></script>
     <script src="{{asset('js/Mascota.js')}}"></script>
+    <script src="{{asset('js/MasSolicitado.js')}}"></script>
 </body>
 
 </html>

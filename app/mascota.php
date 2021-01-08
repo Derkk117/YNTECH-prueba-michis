@@ -10,4 +10,10 @@ class mascota extends Model
     public function Usuario(){
         return $this->belongsTo('App\Usuario');
     }
+
+    //funcion que nos regresa las citas que tiene la mascota
+    public function Citas(){
+        return $this->hasMany('App\Cita');
+    }
 }
+
